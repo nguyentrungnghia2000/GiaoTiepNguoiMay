@@ -34,19 +34,25 @@ class _MyHomePageState extends State<MyPurchase> {
                     width: screenWidth * 0.15,
                     height: 110,
                   ),
-                  Container(
-                      color: Colors.black12,
-                      width: screenWidth * 0.105,
-                      height: 110,
-                      child: Center(
-                        child: Text(
-                          "Logo",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 32,
-                          ),
-                        ),
-                      )),
+                  GestureDetector(
+                      onTap: () {
+                        final snackBar = SnackBar(
+                            content: Text('You have been tap to the logo'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      child: Container(
+                          color: Colors.black12,
+                          width: screenWidth * 0.105,
+                          height: 110,
+                          child: Center(
+                            child: Text(
+                              "Logo",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 32,
+                              ),
+                            ),
+                          ))),
                   Container(
                     width: screenWidth * 0.05,
                     height: 110,

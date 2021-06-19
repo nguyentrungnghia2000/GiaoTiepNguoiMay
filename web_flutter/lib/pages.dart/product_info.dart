@@ -7,6 +7,7 @@ import 'package:web_flutter/widgets/hot_research.dart';
 import 'package:web_flutter/widgets/ending_page.dart';
 import 'package:web_flutter/widgets/advertise.dart';
 import 'package:web_flutter/widgets/info_of_product.dart';
+import 'package:web_flutter/pages.dart/my_purchase.dart';
 
 class ProductInfo extends StatefulWidget {
   @override
@@ -35,19 +36,27 @@ class _ProductInfo extends State<ProductInfo> {
                     width: screenWidth * 0.15,
                     height: 110,
                   ),
-                  Container(
-                      color: Colors.black12,
-                      width: screenWidth * 0.105,
-                      height: 110,
-                      child: Center(
-                        child: Text(
-                          "Logo",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 32,
-                          ),
-                        ),
-                      )),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyPurchase(),
+                            ));
+                      },
+                      child: Container(
+                          color: Colors.black12,
+                          width: screenWidth * 0.105,
+                          height: 110,
+                          child: Center(
+                            child: Text(
+                              "Logo",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 32,
+                              ),
+                            ),
+                          ))),
                   Container(
                     width: screenWidth * 0.05,
                     height: 110,
