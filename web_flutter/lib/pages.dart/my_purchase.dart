@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_scaler/flutter_screen_scaler.dart';
+import 'package:web_flutter/pages.dart/cart.dart';
 import 'package:web_flutter/widgets/search_bar_widget.dart';
 import 'package:web_flutter/widgets/profile_dropdownbutton.dart';
 import 'package:web_flutter/widgets/categories_bar.dart';
@@ -22,12 +23,12 @@ class _MyHomePageState extends State<MyPurchase> {
     ScreenScaler scaler = new ScreenScaler()..init(context);
     return SafeArea(
         child: Scaffold(
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
               color: Color.fromRGBO(6, 130, 130, 1),
-              height: 110,
+              height: 200,
               child: Row(
                 children: <Widget>[
                   Container(
@@ -81,7 +82,13 @@ class _MyHomePageState extends State<MyPurchase> {
                       icon: Icon(Icons.shopping_bag),
                       iconSize: 42,
                       color: Colors.white,
-                      onPressed: () {},
+                      onPressed: () {
+                        final snackBar = SnackBar(
+                            content: Text('You have been tap to the Cart'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cart()));
+                      },
                     ),
                   )
                 ],
