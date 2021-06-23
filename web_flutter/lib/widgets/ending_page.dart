@@ -76,7 +76,7 @@ class _EndingPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: screenWidth * 0.3,
+                    width: screenWidth * 0.35,
                     height: 300,
                     child: Column(
                       children: <Widget>[
@@ -150,6 +150,9 @@ class _EndingPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    width: 10,
                   ),
                   Container(
                     width: screenWidth * 0.2,

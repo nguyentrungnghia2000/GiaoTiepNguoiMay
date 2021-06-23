@@ -21,43 +21,45 @@ class _Avertise extends StatelessWidget {
     return Center(
         child: Container(
       width: screenWidth * 0.7,
-      height: screenHeight * 0.7,
+      height: screenHeight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
         border: Border.all(color: Colors.black26),
       ),
-      child: Column(
-        children: <Widget>[
-          Container(
-            height: 50,
-            child: Row(
-              children: [
-                Container(
-                  width: 20,
-                ),
-                Text(
-                  "Advertisement",
-                  style: hotResearchStyle,
-                ),
-              ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              height: 50,
+              child: Row(
+                children: [
+                  Container(
+                    width: 20,
+                  ),
+                  Text(
+                    "Advertisement",
+                    style: hotResearchStyle,
+                  ),
+                ],
+              ),
             ),
-          ),
-          Container(
-            color: Colors.black12,
-            height: 5,
-          ),
-          Container(
-            height: 10,
-          ),
-          Container(
-              width: screenWidth * 0.65,
-              height: 600,
+            Container(
               color: Colors.black12,
-              child: Center(
-                child: Text("image asset"),
-              )),
-        ],
+              height: 5,
+            ),
+            Container(
+              height: 10,
+            ),
+            Container(
+                width: screenWidth * 0.65,
+                height: 600,
+                color: Colors.black12,
+                child: Center(
+                  child: Text("image asset"),
+                )),
+          ],
+        ),
       ),
     ));
   }
