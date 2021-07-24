@@ -36,7 +36,7 @@ class _CartState extends State<Cart> {
           children: <Widget>[
             Container(
               color: Color.fromRGBO(6, 130, 130, 1),
-              height: 200,
+              height: 100,
               child: Row(
                 children: <Widget>[
                   Container(
@@ -48,9 +48,13 @@ class _CartState extends State<Cart> {
                         final snackBar = SnackBar(
                             content: Text('You have been tap to the logo'));
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyPurchase(),
+                            ));
                       },
                       child: Container(
-                          color: Colors.black12,
                           width: screenWidth * 0.105,
                           height: 110,
                           child: Center(
@@ -115,240 +119,239 @@ class _CartState extends State<Cart> {
                   Container(
                     height: 20,
                   ),
-                  Center(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.only(left: 230),
-                          width: 730,
-                          height: MediaQuery.of(context).size.height,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
-                              border: Border.all(color: Colors.black26)),
-                          child: Column(
-                            children: [
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Container(
-                                  margin: const EdgeInsets.all(12),
-                                  child: Text(
-                                    "Cart",
-                                    style: hotResearchStyle,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 24),
+                    child: Center(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(left: 230),
+                            width: 730,
+                            height: MediaQuery.of(context).size.height,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(color: Colors.black26)),
+                            child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Container(
+                                    margin: const EdgeInsets.all(12),
+                                    child: Text(
+                                      "Cart",
+                                      style: hotResearchStyle,
+                                    ),
                                   ),
                                 ),
+                                Divider(
+                                  thickness: 5,
+                                  color: Colors.grey,
+                                ),
+                                Container(
+                                  height: 615,
+                                  child: SingleChildScrollView(
+                                    child: Column(
+                                      children: [
+                                        ProductCart(),
+                                        ProductCart(),
+                                        ProductCart(),
+                                        ProductCart(),
+                                        ProductCart(),
+                                        ProductCart(),
+                                        ProductCart(),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 24,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                width: 320,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 24,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Your Address:",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Your Name: | Phone Number:",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Your Address:",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 24,
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Divider(
-                                thickness: 5,
-                                color: Colors.grey,
+                              SizedBox(
+                                height: 36,
                               ),
                               Container(
-                                height: 650,
-                                child: SingleChildScrollView(
-                                  child: Column(
-                                    children: [
-                                      ProductCart(),
-                                      ProductCart(),
-                                      ProductCart(),
-                                      ProductCart(),
-                                      ProductCart(),
-                                      ProductCart(),
-                                      ProductCart(),
-                                    ],
+                                width: 320,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 24,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Total Price",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Price",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        "Disscount",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 24,
+                                    ),
+                                    Divider(
+                                      thickness: 3,
+                                      color: Colors.grey,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 12),
+                                          child: Text(
+                                            "Total Price:",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w700),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 12, right: 12),
+                                          child: Text(
+                                            "Total Price",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 24,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (_) => new AlertDialog(
+                                            title: new Text("Order Message"),
+                                            content: new Text("Order Success"),
+                                            actions: <Widget>[
+                                              FlatButton(
+                                                child: Text('OK'),
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                              )
+                                            ],
+                                          ));
+                                },
+                                child: Container(
+                                  width: 320,
+                                  height: 40,
+                                  decoration: BoxDecoration(
+                                    color: Color.fromRGBO(6, 130, 130, 1),
+                                    borderRadius: BorderRadius.circular(12),
                                   ),
+                                  child: Center(
+                                      child: Text(
+                                    "Order",
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.white),
+                                  )),
                                 ),
                               )
                             ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: 24,
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              width: 320,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 24,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Your Address:",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Your Name: | Phone Number:",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Your Address:",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 24,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 36,
-                            ),
-                            Container(
-                              width: 320,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 24,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Total Price",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Price",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 12),
-                                    child: Text(
-                                      "Disscount",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 24,
-                                  ),
-                                  Divider(
-                                    thickness: 3,
-                                    color: Colors.grey,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 12),
-                                        child: Text(
-                                          "Total Price:",
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w700),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 12, right: 12),
-                                        child: Text(
-                                          "Total Price",
-                                          style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 12,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(
-                              height: 24,
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (_) => new AlertDialog(
-                                          title: new Text("Order Message"),
-                                          content: new Text("Order Success"),
-                                          actions: <Widget>[
-                                            FlatButton(
-                                              child: Text('OK'),
-                                              onPressed: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            CategoriesPage()));
-                                              },
-                                            )
-                                          ],
-                                        ));
-                              },
-                              child: Container(
-                                width: 320,
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(6, 130, 130, 1),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Center(
-                                    child: Text(
-                                  "Order",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white),
-                                )),
-                              ),
-                            )
-                          ],
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

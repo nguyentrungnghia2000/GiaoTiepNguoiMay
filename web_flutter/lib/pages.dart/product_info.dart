@@ -25,12 +25,12 @@ class _ProductInfo extends State<ProductInfo> {
     ScreenScaler scaler = new ScreenScaler()..init(context);
     return SafeArea(
         child: Scaffold(
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
               color: Color.fromRGBO(6, 130, 130, 1),
-              height: 110,
+              height: 100,
               child: Row(
                 children: <Widget>[
                   Container(
@@ -46,7 +46,6 @@ class _ProductInfo extends State<ProductInfo> {
                             ));
                       },
                       child: Container(
-                          color: Colors.black12,
                           width: screenWidth * 0.105,
                           height: 110,
                           child: Center(

@@ -56,7 +56,7 @@ class _Avertise extends StatelessWidget {
                 height: 600,
                 color: Colors.black12,
                 child: Center(
-                  child: Text("image asset"),
+                  child: Image.asset('assets/advertising.jpg'),
                 )),
           ],
         ),
@@ -64,5 +64,5 @@ class _Avertise extends StatelessWidget {
     ));
   }
 
-  Widget buildProduct() => Product();
+  // Widget buildProduct() => Product();
 }

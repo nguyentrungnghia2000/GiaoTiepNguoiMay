@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyPurchase> {
           children: <Widget>[
             Container(
               color: Color.fromRGBO(6, 130, 130, 1),
-              height: 200,
+              height: 100,
               child: Row(
                 children: <Widget>[
                   Container(
@@ -42,7 +42,6 @@ class _MyHomePageState extends State<MyPurchase> {
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       },
                       child: Container(
-                          color: Colors.black12,
                           width: screenWidth * 0.105,
                           height: 110,
                           child: Center(

@@ -40,12 +40,12 @@ class _InfoOfProduct extends State<InfoOfProduct> {
       color: Colors.black,
     );
     final priceStyle = TextStyle(
-      fontSize: 32,
+      fontSize: 25,
       fontWeight: FontWeight.bold,
       color: Color.fromRGBO(6, 130, 130, 1),
     );
     final rateStyle = TextStyle(
-      fontSize: 32,
+      fontSize: 25,
       fontWeight: FontWeight.bold,
       color: Color.fromRGBO(41, 169, 225, 1),
     );
@@ -64,12 +64,7 @@ class _InfoOfProduct extends State<InfoOfProduct> {
                     color: Colors.black12,
                     width: screenWidth * 0.34,
                     height: 500,
-                    child: Center(
-                      child: Text(
-                        "image asset",
-                        style: infoStyle,
-                      ),
-                    ),
+                    child: Center(child: Image.asset('assets/chairsoborg.png')),
                   ),
                   Container(
                     width: screenWidth * 0.34,
@@ -97,7 +92,7 @@ class _InfoOfProduct extends State<InfoOfProduct> {
                           child: Row(
                             children: <Widget>[
                               Container(
-                                width: 160,
+                                width: 110,
                               ),
                               Container(
                                 width: screenWidth * 0.2,
@@ -115,7 +110,7 @@ class _InfoOfProduct extends State<InfoOfProduct> {
                           child: Row(
                             children: <Widget>[
                               Container(
-                                width: 150,
+                                width: 95,
                               ),
                               Container(
                                 width: screenWidth * 0.2,

@@ -27,6 +27,7 @@ class _CategoriesBar extends StatelessWidget {
         border: Border.all(color: Colors.black26),
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           Container(
               width: screenWidth * 0.08,
@@ -114,7 +115,7 @@ class _CategoriesBar extends StatelessWidget {
                     minWidth: screenWidth * 0.06,
                     onPressed: () {},
                     child: Text(
-                      "Bán chạy",
+                      "Best sale",
                       style: categoryStyle,
                     )),
               )),
@@ -126,7 +127,7 @@ class _CategoriesBar extends StatelessWidget {
                     minWidth: screenWidth * 0.06,
                     onPressed: () {},
                     child: Text(
-                      "Khuyến mãi",
+                      "Sale off",
                       style: categoryStyle,
                     )),
               )),

@@ -179,7 +179,7 @@ class _EndingPage extends StatelessWidget {
                                   color: Colors.white,
                                 )),
                             Container(
-                              width: 30,
+                              width: 25,
                             ),
                             IconButton(
                                 onPressed: () {},
@@ -188,7 +188,7 @@ class _EndingPage extends StatelessWidget {
                                   color: Colors.white,
                                 )),
                             Container(
-                              width: 30,
+                              width: 25,
                             ),
                             IconButton(
                                 onPressed: () {},

@@ -49,7 +49,7 @@ class _ProfileDropDownButton extends State<ProfileDropDownButton> {
                   width: screenWidth * 0.042,
                   height: 50,
                   child: Center(
-                    child: Text("image asset"),
+                    child: Image.asset('assets/user.png'),
                   ),
                 ),
                 Container(

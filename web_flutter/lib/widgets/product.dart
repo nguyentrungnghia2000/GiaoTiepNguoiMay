@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:web_flutter/pages.dart/product_info.dart';
 
-class Product extends StatelessWidget {
-  String imageAssets;
+class Product extends StatefulWidget {
+  final String imageAssets;
+  Product({this.imageAssets});
+
   @override
-  Widget build(BuildContext context) {
+  State<StatefulWidget> createState() {
     return _Product();
   }
 }
 
-class _Product extends StatelessWidget {
+class _Product extends State<Product> {
   final textStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   final textStyle1 = TextStyle(fontSize: 20);
   @override
@@ -24,14 +26,14 @@ class _Product extends StatelessWidget {
       },
       child: Container(
         color: Colors.black12,
-        width: 300,
+        width: 290,
         height: 290,
         child: Column(
           children: <Widget>[
             Container(
               height: 200,
               child: Center(
-                child: Text("Image asset"),
+                child: Image.asset(widget.imageAssets),
               ),
             ),
             Container(
@@ -62,7 +64,7 @@ class _Product extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Container(
-                          width: 50,
+                          width: 45,
                         ),
                         Text(
                           "0.0",

@@ -61,21 +61,22 @@ class _HotResearch extends StatelessWidget {
                       Container(
                         height: 400,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                               width: 15,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/softchair.png"),
                             Container(
-                              width: 4,
+                              width: 15,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/chairsoborg.png"),
                             Container(
-                              width: 4,
+                              width: 15,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/chairsoborg.png"),
                             Container(
-                              width: 4,
+                              width: 15,
                             ),
                           ],
                         ),
@@ -83,19 +84,20 @@ class _HotResearch extends StatelessWidget {
                       Container(
                         height: 400,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                               width: 15,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/blackchairsoborg.png"),
                             Container(
                               width: 4,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/chairsoborg.png"),
                             Container(
                               width: 4,
                             ),
-                            buildProduct(),
+                            buildProduct("assets/blackchairsoborg.png"),
                             Container(
                               width: 4,
                             ),
@@ -124,5 +126,7 @@ class _HotResearch extends StatelessWidget {
     );
   }
 
-  Widget buildProduct() => Product();
+  Widget buildProduct(String imageAssets) => Product(
+        imageAssets: imageAssets,
+      );
 }
