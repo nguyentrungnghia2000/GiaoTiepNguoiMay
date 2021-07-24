@@ -9,6 +9,8 @@ import 'package:web_flutter/widgets/profile_dropdownbutton.dart';
 import 'package:web_flutter/widgets/search_bar_widget.dart';
 import 'package:web_flutter/widgets/showInfor.dart';
 
+import 'my_purchase.dart';
+
 class CategoriesPage extends StatefulWidget {
   //const CategoriesPage({ Key? key }) : super(key: key);
 
@@ -35,7 +37,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
           children: <Widget>[
             Container(
               color: Color.fromRGBO(6, 130, 130, 1),
-              height: 200,
+              height: 100,
               child: Row(
                 children: <Widget>[
                   Container(
@@ -47,9 +49,13 @@ class _CategoriesPageState extends State<CategoriesPage> {
                         final snackBar = SnackBar(
                             content: Text('You have been tap to the logo'));
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyPurchase(),
+                            ));
                       },
                       child: Container(
-                          color: Colors.black12,
                           width: screenWidth * 0.105,
                           height: 110,
                           child: Center(
@@ -104,7 +110,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             Container(
               color: Colors.black12,
               width: screenWidth,
-              height: screenHeight * 0.878,
+              height: screenHeight * 0.87,
               child: ListView(
                 children: <Widget>[
                   Container(
@@ -392,7 +398,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                                 color: Colors.grey,
                               ),
                               Container(
-                                height: 650,
+                                height: 615,
                                 child: SingleChildScrollView(
                                   child: Column(
                                     children: [
